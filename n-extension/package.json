@@ -1,0 +1,30 @@
+{
+  "name": "n",
+  "displayName": "N",
+  "description": "Syntax highlighting and language support for the N programming language.",
+  "version": "0.0.1",
+  "publisher": "NotDream",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "n",
+        "aliases": ["N", "n"],
+        "extensions": [".n"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "n",
+        "scopeName": "source.n",
+        "path": "./syntaxes/n.tmLanguage.json"
+      }
+    ]
+  }
+}

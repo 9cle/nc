@@ -1,0 +1,21 @@
+import std;
+
+void fn() {
+    std::pln("hmm function?");
+    std::repeat("std::pln('Hello, World!')", 6); // a comment right here!
+}
+
+void main() {
+    int x: 5;
+    std::pln("std!!");
+    if x != 5 {
+        std::pln("oh not 5?");
+    }
+    else if x == 5 {
+        std::pln("yes 5!");
+    }
+    else {
+        std::pln("idk bruh");
+    }
+    fn();
+}

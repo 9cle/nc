@@ -1,0 +1,89 @@
+{
+  "scopeName": "source.n",
+  "name": "N",
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#strings" },
+    { "include": "#keywords" },
+    { "include": "#builtins" },
+    { "include": "#numbers" },
+    { "include": "#operators" },
+    {
+      "match": "\\b[A-Za-z_][A-Za-z0-9_]*\\b",
+      "name": "variable.other.n"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.n",
+          "match": "//.*$"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.n",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.n",
+              "match": "\\\\."
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.single.n",
+          "begin": "'",
+          "end": "'",
+          "patterns": [
+            {
+              "name": "constant.character.escape.n",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.n",
+          "match": "\\b(?:import|void|pub|type|let|var|mut|nil|if|else|match|loop|break|continue|int|true|false|is|as|defer|test|error|return)\\b"
+        }
+      ]
+    },
+    "builtins": {
+      "patterns": [
+        {
+          "name": "entity.name.namespace.n",
+          "match": "\\bstd\\b"
+        },
+        {
+          "name": "support.function.n",
+          "match": "\\b(?:pln|repeat)\\b"
+        }
+      ]
+    },
+
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.n",
+          "match": "\\b\\d+\\b"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.n",
+          "match": "!=|==|::|\\.|\\(|\\)|\\{|\\}|;|,|<=|>=|<|>|=|:"
+        }
+      ]
+    }
+  }
+}

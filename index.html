@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NC | Minimalist Native Compiler</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">NC_COMPILER</div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#demo">Example</a>
+                <a href="#download">Download</a>
+            </div>
+        </nav>
+
+        <header class="hero">
+            <h1>The Minimalist<br>Native Compiler.</h1>
+            <p>High-speed COFF generation for Windows x86_64. Built for performance, designed for simplicity.</p>
+            <div class="cta-group">
+                <a href="nc-x86_64-installer.exe" class="btn btn-primary">Download v0.0.1</a>
+                <a href="#demo" class="btn btn-secondary">View Sample</a>
+            </div>
+        </header>
+
+        <section id="features" class="features">
+            <div class="section-head">
+                <h2>Fast. Small. Native.</h2>
+            </div>
+            <div class="grid">
+                <div class="card">
+                    <h3>Direct Object Emission</h3>
+                    <p>NC directly emits Windows COFF .obj files, bypassing slow IR steps for maximum compilation speed.</p>
+                </div>
+                <div class="card">
+                    <h3>Shadow Space Aware</h3>
+                    <p>Native calling convention support with built-in shadow space management for reliable Windows API integration.</p>
+                </div>
+                <div class="card">
+                    <h3>Minimalist Syntax</h3>
+                    <p>A clean, type-safe syntax that feels modern yet stays close to the metal.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="demo" class="demo">
+            <div class="section-head">
+                <h2>Syntax Preview</h2>
+            </div>
+            <div class="code-container">
+                <div class="code-header">// hello.n</div>
+                <pre>
+<span class="keyword">import</span> std;
+
+<span class="keyword">void</span> main() {
+    <span class="type">int</span> x: <span class="string">5</span>;
+    <span class="namespace">std</span>::pln(<span class="string">"Hello from NC!"</span>);
+
+    <span class="keyword">if</span> x == <span class="string">5</span> {
+        <span class="namespace">std</span>::pln(<span class="string">"Logic is sound."</span>);
+    } <span class="keyword">else</span> {
+        <span class="namespace">std</span>::pln(<span class="string">"Not 5?"</span>);
+    }
+}</pre>
+            </div>
+        </section>
+
+        <section id="download" class="demo" style="text-align: center;">
+            <div class="section-head">
+                <h2>Ready to compile?</h2>
+            </div>
+            <a href="nc-x86_64-installer.exe" class="btn btn-primary" style="font-size: 1.2rem; padding: 1.5rem 3rem;">Download NC for Windows</a>
+            <p style="margin-top: 2rem; color: #666;">Includes nc.exe and standard library definitions.</p>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 NC Compiler Team. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
